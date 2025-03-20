@@ -19,15 +19,15 @@ We provide an example to train, attack and evaluate our model on Traffic dataset
 #### Train
 * To train a clean model, run
 ```
-python train.py trained_models/traffic/dim10-rank5/ --max_target_dim 10 --rank 5 --epochs 50 --dataset traffic --prediction_length 24
+python train.py trained_models/traffic/dim10-rank5/ --max_target_dim 10 --rank 5 --epochs 5 --dataset traffic --prediction_length 24
 ```
 * To train a model with data augmentation, run
 ```
-python train.py trained_models/gaussian/traffic/sigma_0.1/dim10-rank5/ --max_target_dim 10 --rank 5 --epochs 50 --dataset traffic --prediction_length 24 --gaussian
+python train.py trained_models/gaussian/traffic/sigma_0.1/dim10-rank5/ --max_target_dim 10 --rank 5 --epochs 5 --dataset traffic --prediction_length 24 --gaussian
 ```
 * To train a model with mini-max defense, run
 ```
-python train_adv.py trained_models_adv/traffic/dim10-rank5-s5/ --max_target_dim 10 --rank 5 --epochs 50 --dataset traffic --prediction_length 24 --sparsity 5 --attack_params attack_params/attack_config_traffic_4.json --lr 0.0001
+python train_adv.py trained_models_adv/traffic/dim10-rank5-s5/ --max_target_dim 10 --rank 5 --epochs 5 --dataset traffic --prediction_length 24 --sparsity 5 --attack_params attack_params/attack_config_traffic_4.json --lr 0.0001
 ```
 
 #### Generate deterministic adversarial attack
